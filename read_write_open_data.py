@@ -3,7 +3,7 @@
 
 # In[ ]:
 
-# not latlong
+'''# not latlong
 golf = pd.read_csv("Golf_Courses.csv")
 golf.head()
 
@@ -32,6 +32,7 @@ live_music.head()
 #latlong not in columns
 urban_design = pd.read_csv("Urban_Design_Architecture_Awards_Recipients.csv")
 urban_design.head()
+print(500)'''
 
 
 # In[ ]:
@@ -49,7 +50,7 @@ b = 4
 
 # In[ ]:
 
-import pandas as pd
+import pandas as pd#
 import numpy as np
 import matplotlib.pyplot as plt
 #import seaborn as sns
@@ -69,17 +70,18 @@ a = df[:]
 
 # In[ ]:
 
-a = "b"
-def
+a['LATITUDE'][4]
 
 
 # In[ ]:
 
-import requests
-import io
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+#everything previous was unnecessary this is the code used for parsing csv files
+
+import requests     #-|
+import io           # |-#used for pulling links online and storing their data is a file
+import pandas as pd #-|
+import numpy as np#some csv files use numpy data types, unused for most part
+import matplotlib.pyplot as plt#used for testing in between writing this code
 #import seaborn as sns
 #sns 
 #df = pd.read_csv(io.StringIO(file.text))
@@ -87,16 +89,6 @@ import matplotlib.pyplot as plt
 
 
 # In[ ]:
-
-import requests
-import io
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-#import seaborn as sns
-#sns 
-#df = pd.read_csv(io.StringIO(file.text))
-#print(df.head())
 
 
 arenas_link = requests.get('https://opendata.arcgis.com/datasets/2d543c2f199c4f3bb52c5edc1c389c3f_3.csv')
@@ -142,98 +134,6 @@ tourism_points_of_interest_link = requests.get('https://opendata.arcgis.com/data
 tourism_points_of_interest = pd.read_csv(io.StringIO(tourism_points_of_interest_link.text))
 
 
-'''
-for i in range(len(arenas)):
-    arenas['ADDRESS'][i] = ('Address: ' + arenas['ADDRESS'][i] + '\nCommunity: ' + arenas['COMMUNITY'][i] + '\nPhone: ' + arenas['PHONE'][i])
-
-arenas.rename(columns={'ADDRESS':'DESCRIPTION'}, inplace=True)
-
-arenas = arenas[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-
-
-
-beaches.rename(columns={'WATER_SOURCE':'DESCRIPTION'}, inplace=True)
-
-beaches = beaches[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-
-print(beaches.head())
-
-
-
-for i in range(len(city_waterfalls)):
-    city_waterfalls['CLUSTER_AREA'][i] = ('Area: ' + city_waterfalls['CLUSTER_AREA'][i] + '\nAlternate Name: ' + str(city_waterfalls['ALTERNATE_NAME'][i]) + '\nHeight: ' + str(city_waterfalls['HEIGHT_IN_M'][i]) + 'm' + '\nWidth: ' + str(city_waterfalls['WIDTH_IN_M'][i]) + 'm')
-
-city_waterfalls.rename(columns={'CLUSTER_AREA':'DESCRIPTION'}, inplace=True)
-
-city_waterfalls = city_waterfalls[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-print(city_waterfalls.head())
-
-
-
-for i in range(len(educational_institutions)):
-    educational_institutions['ADDRESS'][i] = ('Address: ' + educational_institutions['ADDRESS'][i] + '\nCommunity: ' + educational_institutions['COMMUNITY'][i] + '\nCategory: ' + educational_institutions['CATEGORY'][i] + '\nSchool Board: ' + str(educational_institutions['SCHOOL_BOARD'][i]))
-
-educational_institutions.rename(columns={'ADDRESS':'DESCRIPTION'}, inplace=True)
-
-educational_institutions = educational_institutions[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-print(educational_institutions.head())
-
-
-
-for i in range(len(libraries)):
-    libraries['HOLDINGS'][i] = ('Holdings: ' + str(libraries['HOLDINGS'][i]) + '\nCirculation: ' + str(libraries['CIRCULATION'][i]))
-
-libraries.rename(columns={'HOLDINGS':'DESCRIPTION'}, inplace=True)
-
-libraries = libraries[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-
-print(libraries.head())
-
-
-
-for i in range(len(campgrounds)):
-    campgrounds['LOCATION'][i] = ('Address: ' + campgrounds['LOCATION'][i] + '\nURL: ' + campgrounds['URL'][i])
-
-campgrounds.rename(columns={'LOCATION':'DESCRIPTION'}, inplace=True)
-
-campgrounds = campgrounds[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-
-print(campgrounds.head())
-
-
-
-for i in range(len(museums_and_galleries)):
-    museums_and_galleries['OBJECTID'][i] = ('N/A')
-
-museums_and_galleries.rename(columns={'OBJECTID':'DESCRIPTION'}, inplace=True)
-
-museums_and_galleries = museums_and_galleries[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-print(museums_and_galleries.head())
-
-
-
-for i in range(len(park_amenities)):
-    park_amenities['TYPE'][i] = (str(park_amenities['TYPE'][i]) + 'ball')
-    park_amenities['REC_AREA'][i] = ('Recreational Area: ' + str(park_amenities['REC_AREA'][i]) + 'Ownership: ' + str(park_amenities['OWNERSHIP'][i]))
-
-park_amenities.rename(columns={'TYPE':'NAME'}, inplace=True)
-park_amenities.rename(columns={'REC_AREA':'DESCRIPTION'}, inplace=True)
-
-park_amenities = park_amenities[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-print(park_amenities.head())
-
-
-
-for i in range(len(places_of_worship)):
-    places_of_worship['DENOMINATION'][i] = ('Denomination: ' + places_of_worship['DENOMINATION'][i] + '\nAddress: ' + places_of_worship['ADDRESS'][i] + '\nCommunity: ' + places_of_worship['COMMUNITY'][i])
-
-places_of_worship.rename(columns={'DENOMINATION':'DESCRIPTION'}, inplace=True)
-
-places_of_worship = places_of_worship[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
-print(places_of_worship.head())
-'''
-print(2)
-
 
 
 # In[ ]:
@@ -243,7 +143,7 @@ print(2)
 
 # In[ ]:
 
-df1= pd.read_csv("Arenas.csv")
+'''df1= pd.read_csv("Arenas.csv")
 df2= pd.read_csv("Beaches.csv")
 df3= pd.read_csv("Campgrounds.csv")
 df4= pd.read_csv("City_Waterfalls.csv")
@@ -256,7 +156,7 @@ df10= pd.read_csv("Public_Art_and_Monuments.csv")
 df11= pd.read_csv("Recreation_and_Community_Centres.csv")
 df12= pd.read_csv("SoBi_Hubs.csv")
 df13= pd.read_csv("Spray_Pads.csv")
-df14= pd.read_csv("Tourism_Points_of_Interest.csv")
+df14= pd.read_csv("Tourism_Points_of_Interest.csv")'''
 
 
 # In[ ]:
@@ -410,38 +310,37 @@ tourism_points_of_interest.rename(columns={'TITLE':'NAME'}, inplace=True)
 tourism_points_of_interest = tourism_points_of_interest[['LATITUDE','LONGITUDE','NAME','DESCRIPTION']]
 
 
-# In[ ]:
+# In[24]:
 
 alldata = arenas
 alldata = alldata.append(beaches)
-print(len(alldata))
+
 alldata.to_csv("ALL_DATA.csv")
 alldata = alldata.append(campgrounds)
-print(len(alldata))
+
 alldata = alldata.append(city_waterfalls)
-print(len(alldata))
+
 alldata = alldata.append(educational_institutions)
-print(len(alldata))
+
 alldata = alldata.append(libraries)
-print(len(alldata))
+
 alldata = alldata.append(museums_and_galleries)
-print(len(alldata))
+
 alldata = alldata.append(park_amenities)
-print(len(alldata))
+
 alldata = alldata.append(places_of_worship)
-print(len(alldata))
+
 alldata = alldata.append(public_art_and_monuments)
-print(len(alldata))
+
 alldata = alldata.append(recreation_and_community_centres)
-print(len(alldata))
+
 alldata = alldata.append(sobi_hubs)
-print(len(alldata))
+
 alldata = alldata.append(spray_pads)
-print(len(alldata))
+
 alldata = alldata.append(tourism_points_of_interest)
-print(len(alldata))
-print(4 * 5)
-alldata.to_csv("ALL_DATA2.csv")
+
+alldata.to_csv("ALL_DATA.csv")
 
 
 
@@ -477,4 +376,5 @@ for index, row in alldata.iterrows():
  #   print(type(row['LATITUDE']))
 results = results[1:]
 results.to_csv("RESULTS.csv")
+print("Finished ")
 
