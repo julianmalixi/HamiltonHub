@@ -59,18 +59,18 @@ import matplotlib.pyplot as plt
 
 # In[ ]:
 
-df = pd.read_csv("School_Crossing_Guard_Locations.csv")
-df.columns
+#df = pd.read_csv("School_Crossing_Guard_Locations.csv")
+#df.columns
 
 
 # In[ ]:
 
-a = df[:]
+#a = df[:]
 
 
 # In[ ]:
 
-a['LATITUDE'][4]
+#a['LATITUDE'][4]
 
 
 # In[ ]:
