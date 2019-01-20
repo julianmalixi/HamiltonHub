@@ -9,3 +9,8 @@ The app, entitled <em>Step Outside</em>, took in a geolocation from the user and
 
 Our code standardises the heterogeneous format of these datasets, extracts lat/long co-ordinates or geolocates street addresses, extracts basic site/event information, and generates a CSV for import to the (sadly, very shortly thereafter defunct) Google Fusion Tables API. The code identifies all entries located within 0.01 degrees of the user's supplied location and was intended to serve up all of the points of interest within that radius.
 
+Feel free to read our code but it doesn't run off of a singular file :)
+
+UH18.py runs first
+read_write_open_data.py runs second
+Step Outside folder contains our interface and runs last
